@@ -1,0 +1,24 @@
+/* App.css */
+.typing-container {
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid orange; /* Cursor effect */
+  animation: blink-caret 0.75s step-end infinite, typing 2s steps(40, end);
+}
+.reveal {
+  border-right: 0.15em solid black; /* Adjust cursor style as needed */
+  white-space: pre-wrap; /* Preserve whitespace */
+  overflow: hidden; /* Hide overflow to make typing effect smooth */
+}
+/* Keyframes for typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(34, 31, 224); }
+}
